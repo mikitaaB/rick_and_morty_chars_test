@@ -1,0 +1,19 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "cd server && node app.js",
+    "server": "cd server && nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"(npm run server)\" \"(npm run client)\""
+  },
+  "author": "Mikita",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "jwt-decode": "^3.1.2"
+  }
+}

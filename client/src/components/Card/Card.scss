@@ -1,0 +1,36 @@
+$radius: 25px;
+$card-margin: 15px;
+$green-color: #209d2a;
+$white-color: #fff;
+$lightblue-color: #dffdff;
+.card {
+	background-color: $lightblue-color;
+	border-radius: $radius;
+	margin: $card-margin;
+	box-sizing: border-box;
+	border: 2px solid $green-color;
+}
+.card:hover {
+	box-shadow: 0 0 0 4px $green-color;
+}
+.imageContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.content div {
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.image {
+	margin: 1rem;
+	object-fit: cover;
+	border-radius: 100%;
+	width: 45%;
+	border: 5px solid $white-color;
+}
+.cardName {
+	font-weight: bold;
+}
