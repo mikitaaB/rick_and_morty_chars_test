@@ -1,4 +1,4 @@
-# How to run
+## How to run
 Run the following commands in the root folder:
 ```
 npm install
@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser. F
 * Local storage
 * Typescript
 
-### What to do
+## What to do
 
 Create a frontend application to fetch an external API
 * Add a home page with a list of characters;
