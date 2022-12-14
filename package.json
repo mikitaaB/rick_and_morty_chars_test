@@ -6,6 +6,7 @@
     "start": "cd server && node app.js",
     "server": "cd server && nodemon app.js",
     "client": "npm run start --prefix client",
+    "preinstall": "concurrently \"cd client && npm install\" \"cd server && npm install\"",
     "dev": "concurrently \"(npm run server)\" \"(npm run client)\""
   },
   "author": "Mikita",
