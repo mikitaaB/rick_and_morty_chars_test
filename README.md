@@ -1,10 +1,10 @@
 ## How to run
 Run the following commands in the root folder:
 ```
-npm install
-cd server npm install
-cd ../client npm install
-npm run dev
+yarn install
+cd server yarn install
+cd ../client yarn install
+yarn run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Front-end on port 3000, Back-end on port 5000.
 
