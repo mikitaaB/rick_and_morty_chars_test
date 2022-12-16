@@ -1,8 +1,10 @@
 ## How to run
 Run the following commands in the root folder:
 ```
-yarn install
-yarn run dev
+yarn
+cd server && yarn
+cd ../client && yarn
+cd .. && yarn run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Front-end on port 3000, Back-end on port 5000.
 

@@ -6,7 +6,6 @@
     "start": "cd server && nodemon app.js",
     "server": "cd server && node app.js",
     "client": "cd client && yarn start",
-    "postinstall": "concurrently \"cd client && yarn install\" \"cd server && yarn install\"",
     "dev": "concurrently \"(yarn run server)\" \"(yarn run client)\""
   },
   "author": "Mikita",
