@@ -6,14 +6,13 @@
     "start": "cd server && nodemon app.js",
     "server": "cd server && node app.js",
     "client": "cd client && yarn start",
+    "postinstall": "concurrently \"cd client && yarn install\" \"cd server && yarn install\"",
     "dev": "concurrently \"(yarn run server)\" \"(yarn run client)\""
   },
   "author": "Mikita",
   "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^7.6.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "jwt-decode": "^3.1.2"
+    "concurrently": "^7.6.0"
   }
 }
