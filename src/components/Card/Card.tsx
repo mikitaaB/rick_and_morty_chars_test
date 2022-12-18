@@ -1,5 +1,6 @@
 import './Card.scss';
 import { Link } from "react-router-dom";
+import { LocationType } from "../../pages/Home";
 
 type CharacterItemType = {
 	id: number,
@@ -7,9 +8,6 @@ type CharacterItemType = {
 	name: string,
 	status: string,
 	location: LocationType
-};
-type LocationType = {
-	name: string
 };
 
 function Ticket(props: CharacterItemType) {

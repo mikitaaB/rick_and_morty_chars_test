@@ -65,8 +65,8 @@ const Home = function() {
 				color="primary" size="large" onChange={onHandleChange} sx={paginationStyle} />
 			<Grid container>
 				{results.map((item: CharacterItemType) => (
-					<Grid item key={item.id} xs={12} md={6} lg={4}>
-						<Card id={item.id} name={item.name}  image={item.image} status={item.status} location={item.location} />
+					<Grid item key={item.id} xs={12} sm={6} md={6} lg={4}>
+						<Card id={item.id} name={item.name} image={item.image} status={item.status} location={item.location} />
 					</Grid>
 				))}
 			</Grid>

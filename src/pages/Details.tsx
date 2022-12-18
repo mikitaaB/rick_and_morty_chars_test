@@ -52,171 +52,181 @@ function Details() {
 		};
 		loadCharacter();
 	}, [api]);
-
-  return (
-	<div>
-		<Container maxWidth="lg">
-			<Grid
-				container
-				spacing={1}
-				direction="row"
-				justifyContent="center"
-				alignItems="center"
-				columns={{ xs: 6, sm: 8, md: 4 }}
-				sx={{'paddingTop': '10vh'}}
-			>
-				<Grid item>
-					<img src={character.image} alt="" />
-				</Grid>
-				<Grid item>
-					<div>
-						<Typography
-							align='center'
-							variant='h4'
-							gutterBottom
-						>
-						{character.name}
-						</Typography>
-						<Box>
-							<Grid
-								container
-								spacing={{ xs: 1, md: 1 }}
-								columns={{ xs: 1, sm: 1, md: 2 }}
+	const TypographyLabelStyle = {
+		textAlign: {
+			xs: 'center',
+			sm: 'center',
+			md: 'right',
+			lg: 'right',
+			xl: 'right'
+		},
+		fontWeight: 'bold'
+	};
+	const TypographyTextStyle = {
+		textAlign: {
+			xs: 'center',
+			sm: 'center',
+			md: 'left',
+			lg: 'left',
+			xl: 'left'
+		}
+	};
+	return (
+		<div>
+			<Container maxWidth="lg">
+				<Grid
+					container
+					justifyContent="center"
+					alignItems="center"
+					columns={{ xs: 1, sm: 1, md: 2 }}
+					sx={{'paddingTop': '10vh'}}
+				>
+					<Grid item>
+						<img src={character.image} alt="" />
+					</Grid>
+					<Grid item>
+						<div>
+							<Typography
+								align='center'
+								variant='h4'
+								gutterBottom
 							>
-								{character.gender &&
-									<>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-												style={{ fontWeight: 'bold' }}
-											>
-											Gender:
-											</Typography>
-										</Grid>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-											>
-											{character.gender}
-											</Typography>
-										</Grid>
-									</>
-								}
-								{character.location.name &&
-									<>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-												style={{ fontWeight: 'bold' }}
-											>
-											Location:
-											</Typography>
-										</Grid>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-											>
-											{character.location.name}
-											</Typography>
-										</Grid>
-									</>
-								}
-								{character.status &&
-									<>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-												style={{ fontWeight: 'bold' }}
-											>
-											Status:
-											</Typography>
-										</Grid>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-											>
-											{character.status}
-											</Typography>
-										</Grid>
-									</>
-								}
-								{character.origin.name &&
-									<>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-												style={{ fontWeight: 'bold' }}
-											>
-											Origin:
-											</Typography>
-										</Grid>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-											>
-											{character.origin.name}
-											</Typography>
-										</Grid>
-									</>
-								}
-								{character.species &&
-									<>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-												style={{ fontWeight: 'bold' }}
-											>
-											Species:
-											</Typography>
-										</Grid>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-											>
-											{character.species}
-											</Typography>
-										</Grid>
-									</>
-								}
-								{character.type &&
-									<>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-												style={{ fontWeight: 'bold' }}
-											>
-											Type:
-											</Typography>
-										</Grid>
-										<Grid item xs={1} sm={1} md={1}>
-											<Typography
-												align='center'
-												variant='h6'
-											>
-											{character.type}
-											</Typography>
-										</Grid>
-									</>
-								}
-							</Grid>
-						</Box>
-					</div>
+							{character.name}
+							</Typography>
+							<Box>
+								<Grid
+									container
+									spacing={1}
+									columns={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 2 }}
+								>
+									{character.gender &&
+										<>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyLabelStyle}
+													variant='h6'
+												>
+												Gender:
+												</Typography>
+											</Grid>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyTextStyle}
+													variant='h6'
+												>
+												{character.gender}
+												</Typography>
+											</Grid>
+										</>
+									}
+									{character.location.name &&
+										<>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyLabelStyle}
+													variant='h6'
+												>
+												Location:
+												</Typography>
+											</Grid>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyTextStyle}
+													variant='h6'
+												>
+												{character.location.name}
+												</Typography>
+											</Grid>
+										</>
+									}
+									{character.status &&
+										<>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyLabelStyle}
+													variant='h6'
+												>
+												Status:
+												</Typography>
+											</Grid>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyTextStyle}
+													variant='h6'
+												>
+												{character.status}
+												</Typography>
+											</Grid>
+										</>
+									}
+									{character.origin.name &&
+										<>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyLabelStyle}
+													variant='h6'
+												>
+												Origin:
+												</Typography>
+											</Grid>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyTextStyle}
+													variant='h6'
+												>
+												{character.origin.name}
+												</Typography>
+											</Grid>
+										</>
+									}
+									{character.species &&
+										<>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyLabelStyle}
+													variant='h6'
+												>
+												Species:
+												</Typography>
+											</Grid>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyTextStyle}
+													variant='h6'
+												>
+												{character.species}
+												</Typography>
+											</Grid>
+										</>
+									}
+									{character.type &&
+										<>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyLabelStyle}
+													variant='h6'
+												>
+												Type:
+												</Typography>
+											</Grid>
+											<Grid item xs={1} sm={1} md={1}>
+												<Typography
+													sx={TypographyTextStyle}
+													variant='h6'
+												>
+												{character.type}
+												</Typography>
+											</Grid>
+										</>
+									}
+								</Grid>
+							</Box>
+						</div>
+					</Grid>
 				</Grid>
-			</Grid>
-		</Container>
-	</div>
-  );
+			</Container>
+		</div>
+	);
 };
 
 export default Details;
