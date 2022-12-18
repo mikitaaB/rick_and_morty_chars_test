@@ -8,6 +8,13 @@ cd .. && yarn run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Front-end on port 3000, Back-end on port 5000.
 
+## Deploy
+Application deployed via Render service on https://rick-and-morty-front.onrender.com
+Registered user credentials:
+  email: qwerty@qwerty.com
+  password: 12345678
+Branch 'master' only for local deployment.
+
 ## Stack and resources
 
 * https://rickandmortyapi.com/ - API
